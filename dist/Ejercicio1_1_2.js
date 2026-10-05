@@ -40,7 +40,7 @@ const mediciones = [
 ];
 function main() {
     // CCambiar el estado de una estacion
-    mediciones[3].estacion.activa = true;
+    mediciones[2].estacion.activa = true;
     // Error al cambiar readonly
     //mediciones[0].id = 10; //"Cannot assign to 'id' because it is a read-only property."
     let temperaturaMedia = 0;
