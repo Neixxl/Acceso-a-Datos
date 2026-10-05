@@ -1,0 +1,6 @@
+services:
+  typescript:
+    build: .
+    volumes:
+      - .:/app:z
+      - /app/node_modules
