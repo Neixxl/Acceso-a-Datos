@@ -1,3 +1,6 @@
-const nombre: string = "Lucía";
-const edad: number = 20;
-console.log(`${nombre} tiene ${edad} años`);
+function Importante(clase: Function): void {
+  console.log(`La clase ${clase.name} está marcada como importante`);
+}
+
+@Importante
+class Usuario {}

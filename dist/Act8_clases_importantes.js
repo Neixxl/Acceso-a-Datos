@@ -6,11 +6,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-function Importante(clase) {
-    console.log(`La clase ${clase.name} está marcada como importante`);
+const clasesImportantes = [];
+function Importante(target) {
+    clasesImportantes.push(target);
 }
 let Usuario = class Usuario {
 };
 Usuario = __decorate([
     Importante
 ], Usuario);
+let Producto = class Producto {
+};
+Producto = __decorate([
+    Importante
+], Producto);
+class Pedido {
+}
+function mostrarClasesImportantes() {
+    const numeroClasesImportantes = clasesImportantes.length;
+    console.log("El numero de clases importantes son:" + numeroClasesImportantes);
+    if (numeroClasesImportantes > 0) {
+        console.log("Sus nombres son:");
+        clasesImportantes.forEach((clase) => {
+            console.log(clase.name);
+        });
+    }
+}
+mostrarClasesImportantes();
